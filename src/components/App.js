@@ -6,7 +6,6 @@ import { ListItem } from './ListItem';
 export class App extends Component {
 
   setup(props) {
-    
     this.state = {
       total: 0,
       donates: []
@@ -17,7 +16,6 @@ export class App extends Component {
 
     const $amountTitle = document.createElement('h1')
     const $amountWrapper = document.createElement('span')
-
     $amountWrapper.textContent = this.state.total
     
     $amountTitle.className = 'total-amount'
