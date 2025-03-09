@@ -9,11 +9,11 @@ export class ListItem extends Component {
     }
     this.$rootElement = document.createElement('div');
     this.$rootElement.className = 'donate-item';
-    this.$rootElement.textContent = this.state.date
+    this.$rootElement.textContent = `${this.state.date.toLocaleDateString().replaceAll('.', '/')}, ${this.state.date.toLocaleTimeString()}`
     this.$rootElement.id = this.state.id
 
     const donatValue = document.createElement('b')
-    donatValue.textContent = `$${this.state.amount}`
+    donatValue.textContent = `\u00A0- $${this.state.amount}`
 
     this.$rootElement.appendChild(donatValue)
 
