@@ -61,5 +61,7 @@ export class Form extends Component {
     
     const onItemCreate = this.props.onSubmit
     onItemCreate(this.$input.value)
+    this.$input.value = ''
+    this.state.amount = ''
   }
 }
